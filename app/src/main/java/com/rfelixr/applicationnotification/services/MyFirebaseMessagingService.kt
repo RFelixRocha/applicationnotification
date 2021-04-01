@@ -3,10 +3,12 @@ package com.rfelixr.applicationnotification.services
 import android.app.Service
 import android.content.Intent
 import android.os.IBinder
+import com.google.firebase.messaging.FirebaseMessagingService
+import com.google.firebase.messaging.RemoteMessage
 
-class MyFirebaseMessagingService : Service() {
+class MyFirebaseMessagingService : FirebaseMessagingService() {
 
-    override fun onBind(intent: Intent): IBinder {
-        TODO("Return the communication channel to the service.")
+    override fun onMessageReceived(p0: RemoteMessage) {
+        super.onMessageReceived(p0)
     }
 }

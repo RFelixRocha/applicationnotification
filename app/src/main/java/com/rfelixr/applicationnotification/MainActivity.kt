@@ -2,7 +2,9 @@ package com.rfelixr.applicationnotification
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
+import com.google.firebase.iid.FirebaseInstanceId
 import com.rfelixr.applicationnotification.utils.showNotication
 
 class MainActivity : AppCompatActivity() {
@@ -18,5 +20,7 @@ class MainActivity : AppCompatActivity() {
         btnSend.setOnClickListener {
             this.showNotication("123","Aulas Koklin","Bootcamp de andoid kotlin com a DIOS.")
         }
+
+        Log.i("**newToken",FirebaseInstanceId.getInstance().token.toString())
     }
 }
